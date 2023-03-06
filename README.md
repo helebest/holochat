@@ -6,7 +6,7 @@
 4. 设置环境变量，以Linux环境为例:
 ```
    export OPENAI_ORG=YOUR_ORG
-   export OPENAI_KEY=YOUR_ORG
+   export OPENAI_KEY=YOUR_KEY
 ```
 5. 在holochat目录下创建`database`目录，创建`chat.sqlite3`文件作为数据库存储聊天记录
 6. 启动Django
