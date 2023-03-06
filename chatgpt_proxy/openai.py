@@ -1,4 +1,5 @@
 import openai
+import os
 
 
 class SingletonCls(type):
@@ -14,8 +15,8 @@ class OpenAiCli(object):
     __metaclass__ = SingletonCls
 
     def __init__(self):
-        openai.organization = ''
-        openai.api_key = ''
+        openai.organization = os.environ['OPENAI_ORG']
+        openai.api_key = os.environ['OPENAI_KEY']
         self.model = 'gpt-3.5-turbo'
 
     def chat(self, messages: list):
