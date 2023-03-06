@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -63,16 +63,17 @@ body {
 }
 
 .message-text {
+  font-size: 15px;
   background-color: #F2F2F2;
-  padding: 10px;
+  padding: 5px;
   border-radius: 10px;
   margin-bottom: 5px;
 }
 
-.message-time {
-  font-size: 12px;
+.message-text p {
+  font-size: 5px;
   color: #999999;
-  margin-left: 5px;
+  margin-top: 5px;
   white-space: nowrap;
 }
 

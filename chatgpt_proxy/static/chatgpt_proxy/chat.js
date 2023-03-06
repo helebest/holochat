@@ -35,14 +35,14 @@ $(document).ready(function () {
     const iconElement = $("<i>", {class: iconClass});
     if (isOutgoing) {
       messageElement.append($("<div>", {class: "message-content"})
-          .append($("<div>", {class: "message-text"}).text(
-              message.content + '  @' + message.timestamp)));
+          .append($("<div>", {class: "message-text"}).html(
+              message.content + '<p>' + message.timestamp + '</p>')));
       messageElement.append(iconElement);
     } else {
       messageElement.append(iconElement);
       messageElement.append($("<div>", {class: "message-content"})
-          .append($("<div>", {class: "message-text"}).text(
-              message.content + '  @' +  message.timestamp)));
+          .append($("<div>", {class: "message-text"}).html(
+              message.content + '<p>' + message.timestamp + '</p>')));
     }
     messagesContainer.append(messageElement);
     messagesContainer.scrollTop(messagesContainer[0].scrollHeight);
