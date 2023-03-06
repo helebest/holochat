@@ -58,6 +58,8 @@ $(document).ready(function () {
         }
       }
     });
+    const chatMessages = document.querySelector("#chat-messages");
+    chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
   // 处理表单提交事件来发送消息
