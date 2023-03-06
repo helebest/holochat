@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#chat-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#chat-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#chat-messages {
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.incoming-message {
+  justify-content: flex-start;
+}
+
+.incoming-message .incoming-icon {
+  margin-right: 10px;
+}
+.outgoing-message {
+  justify-content: flex-end;
+}
+
+.outgoing-message .outgoing-icon {
+  margin-left: 10px;
+}
+
+.fa-user-circle {
+  font-size: 30px;
+  margin-right: 10px;
+  color: #555;
+}
+
+.fa-user-astronaut {
+  font-size: 30px;
+  margin-right: 10px;
+  color: #555;
+}
+
+.message-content {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 0 5px;
+  max-width: 70%;
+}
+
+.message-text {
+  background-color: #F2F2F2;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.message-time {
+  font-size: 12px;
+  color: #999999;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+
+#chat-input {
+  margin-top: 20px;
+}
+
+#message-form {
+  display: flex;
+  align-items: center;
+}
+
+#message-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: solid 1px #008CBA;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+#message-input:focus {
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>欢迎与ChatGPT对话!</h1>
+    <br>
+    <br />
+      <form action="{% url 'send' %}" method="post">
+      {% csrf_token %}
+      <input type="text" id="id_message_send_input" name='message_send_input' />
+      <button type="submit" id="id_message_send_button">发送消息</button>
+      </form>
+    <br />
+    <br />
+      {% if message_list %}
+      <ul>
+      {% for message in message_list %}
+        <li>{{ message.role }} : {{ message.content }}</li>
+      {% endfor %}
+      </ul>
+      {% else %}
+      <p>没有对话消息</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

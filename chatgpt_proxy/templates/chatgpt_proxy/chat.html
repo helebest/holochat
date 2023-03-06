@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>聊天窗口</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'chatgpt_proxy/chat.css' %}">
+</head>
+<body>
+        <div id="chat-container">
+      <div id="chat-header">
+        <h2>ChatGPT聊天窗口</h2>
+      </div>
+      <div id="chat-messages">
+      </div>
+      <div id="chat-input">
+        <form id="message-form" autocomplete="off">
+          {% csrf_token %}
+          <input type="text" id="message-input" placeholder="请输入消息..." autocomplete="off">
+          <button id="message-submit" type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'chatgpt_proxy/chat.js' %}"></script>
+</body>
+</html>
